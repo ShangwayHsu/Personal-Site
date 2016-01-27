@@ -87,16 +87,17 @@ a:focus {
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(235,235,235,.995);
-    text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     background-color: rgba(235,235,235,.995);
 }
 
 .navbar-custom .navbar-brand {
-
+    
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    font-size: 30px;
+    color: #000;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -230,6 +231,8 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     background: url(../img/home_background.png) no-repeat center center scroll;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -253,6 +256,11 @@ a:focus {
     background-repeat: no-repeat;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
 }
 
 
@@ -379,3 +387,31 @@ footer p {
 	border-color: black;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
