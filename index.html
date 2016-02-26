@@ -84,7 +84,7 @@
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-5">
-					<div class="well Well-md text-center well-custom">
+					<div class="well Well-md text-center well-custom project_tile">
 						<br></br>
 						<i class="fa fa-code fa-5x"></i>
 						<br></br>
@@ -92,14 +92,14 @@
 					</div>
 				</div>
 				<div class="col-md-5">
-					<div class="well Well-sm well-custom"> </div>
-					<div class="well Well-sm text-center well-custom"> 
+					<div class="well Well-sm well-custom project_tile"> </div>
+					<div class="well Well-sm text-center well-custom project_tile"> 
 						<a class="github_icon" href="https://github.com/ShangwayHsu">
 							<i class="fa fa-github fa-4x"> GitHub </i>
 
 						</a>
 					</div>
-					<div class="well Well-sm well-custom"> </div>
+					<div class="well Well-sm well-custom project_tile"> </div>
 				</div>
 				<div class="col-md-1"></div>
 			</div>
@@ -109,10 +109,10 @@
 
 		<!--///////////////////////// CONTACT /////////////////////////// -->
 		<section id="contact" class="container content-section text-center">
-				<div class="container">
-					<h1>Contact</h1>
-					<h5>Feel free to say hi!</h5>
-				</div>
+			<div class="container">
+				<h1>Contact</h1>
+				<h5>Feel free to say hi!</h5>
+			</div>
 			<div class="messenger">
 				<form class="email-form" action="http://formspree.io/shangway.hsu@gmail.com" method="POST" name="contact_form">
 					<span class="name-label">Name *</span> <br>
@@ -124,9 +124,9 @@
 					<input class="input-submit" type="submit" name="submit" value="Send">
 				</form>
 			</div>
-				<br></br>
-				<br></br>
-				<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
 			<div class="container">
 				<a href="http://linkedin.com/in/shangwayhsu">
 					<i class="fa fa-linkedin-square fa-4x"> </i>
@@ -156,7 +156,24 @@
 			</div>
 		</footer>
 
+		<script>
+function showImages(el) {
+	var windowHeight = jQuery( window ).height();
+	$(el).each(function(){
+		var thisPos = $(this).offset().top;
 
+		var topOfWindow = $(window).scrollTop();
+		if (topOfWindow + windowHeight - 200 > thisPos ) {
+			$(this).addClass("fadeIn");
+		}
+	});
+}
+$(window).scroll(function() {
+	showImages('.project_tile');
+});
+
+
+		</script>
 
 
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
