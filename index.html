@@ -126,20 +126,19 @@
 			</div>
 			<br></br>
 			<br></br>
-			<br></br>
 			<div class="container">
 				<a href="http://linkedin.com/in/shangwayhsu">
-					<i class="fa fa-linkedin-square fa-4x"> </i>
+					<i class="fa fa-linkedin-square fa-4x social_button"> </i>
 				</a>
 				&nbsp;
 				&nbsp;
 				<a href="https://www.facebook.com/shangway"> 
-					<i class="fa fa-facebook-square fa-4x"></i>
+					<i class="fa fa-facebook-square fa-4x social_button"></i>
 				</a> 
 				&nbsp;
 				&nbsp;
 				<a href="https://instagram.com/shangerrs/">
-					<i class="fa fa-instagram fa-4x"> </i>
+					<i class="fa fa-instagram fa-4x social_button"> </i>
 				</a> 
 
 			</div>
@@ -163,13 +162,25 @@ function showImages(el) {
 		var thisPos = $(this).offset().top;
 
 		var topOfWindow = $(window).scrollTop();
-		if (topOfWindow + windowHeight - 200 > thisPos ) {
+		if (topOfWindow + windowHeight - 180 > thisPos ) {
+			$(this).addClass("fadeIn");
+		}
+	});
+}
+function showImages_social(el) {
+	var windowHeight = jQuery( window ).height();
+	$(el).each(function(){
+		var thisPos = $(this).offset().top;
+
+		var topOfWindow = $(window).scrollTop();
+		if (topOfWindow + windowHeight - 10 > thisPos ) {
 			$(this).addClass("fadeIn");
 		}
 	});
 }
 $(window).scroll(function() {
 	showImages('.project_tile');
+    showImages_social('.social_button');
 });
 
 
