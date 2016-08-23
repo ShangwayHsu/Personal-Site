@@ -11,6 +11,10 @@
   background: url(../img/home_background.png) no-repeat center center scroll;
 }
 
+.secondary-header {
+    text-align: center;
+}
+
 #about { 
   padding-top: 60px;
   margin-top: -60px;
